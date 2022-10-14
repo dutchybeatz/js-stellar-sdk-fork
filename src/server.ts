@@ -85,6 +85,9 @@ export class Server {
 
     const customHeaders: any = {};
 
+    if (opts.api) {
+      customHeaders["X-API-Key"] = opts.api;
+    }
     if (opts.appName) {
       customHeaders["X-App-Name"] = opts.appName;
     }
